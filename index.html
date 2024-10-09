@@ -11,22 +11,34 @@
       <h1>World Clock</h1>
       <form id="choose-city-form">
         <select name="city" id="city-select">
-          <option value="">Please select a city</option>
-          <option value="city-1">City 1</option>
-          <option value="city-2">City 2</option>
+          <option value="">Please select city</option>
+          <option value="paris">Paris</option>
+          <option value="copenhagen">Copenhagen</option>
         </select>
       </form>
 
-      <h2>City 1</h2>
-      <p class="date">October 9th 2024</p>
-      <div class="time">11:32 AM</div>
-
-      <h2>City 1</h2>
-      <p class="date">October 9th 2024</p>
-      <div class="time">11:32 AM</div>
+      <div class="city-box">
+        <div>
+          <h2>Copenhagen</h2>
+          <div class="date">October 9th 2024</div>
+        </div>
+        <div>
+          <div class="time">11:32 <span class="time-unit">AM</span></div>
+        </div>
+      </div>
+      <div class="city-box">
+        <div>
+          <h2>Paris</h2>
+          <div class="date">October 9th 2024</div>
+        </div>
+        <div>
+          <div class="time">11:32 <span class="time-unit">AM</span></div>
+        </div>
+      </div>
 
       <footer>
-        Coded by Julie M. Jeffries. This project is
+        <hr />
+        Coded by <strong>Julie M. Jeffries</strong>,
         <a
           href="https://github.com/juliemeta/world-clock-time-zones"
           target="_blank"
