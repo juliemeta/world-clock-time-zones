@@ -1,12 +1,32 @@
 body {
-  background: #000;
-  color: #fff;
+  background: #2d2d2e;
+  color: #ffffffb4;
 }
 
 h1 {
   text-align: center;
+  margin: 0;
+}
+
+a {
+  color: rgb(137, 179, 243);
 }
 
 footer {
   text-align: center;
+  margin-top: 35px;
+}
+
+.container {
+  margin: 65px auto;
+  max-width: 60%;
+  background-color: rgba(255, 255, 255, 0.178);
+  border-radius: 8px;
+  padding: 30px 40px;
+}
+
+#city-select {
+  width: 100%;
+  margin: 25px 0;
+  border-radius: 4px;
 }

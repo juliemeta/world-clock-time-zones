@@ -7,19 +7,37 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>World Clock</h1>
-    <footer>
-      Coded by Julie M. Jeffries. This project is
-      <a
-        href="https://github.com/juliemeta/world-clock-time-zones"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and
-      <a href="https://worldclock-timezones.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >.
-    </footer>
+    <div class="container">
+      <h1>World Clock</h1>
+      <form id="choose-city-form">
+        <select name="city" id="city-select">
+          <option value="">Please select a city</option>
+          <option value="city-1">City 1</option>
+          <option value="city-2">City 2</option>
+        </select>
+      </form>
+
+      <h2>City 1</h2>
+      <p class="date">October 9th 2024</p>
+      <div class="time">11:32 AM</div>
+
+      <h2>City 1</h2>
+      <p class="date">October 9th 2024</p>
+      <div class="time">11:32 AM</div>
+
+      <footer>
+        Coded by Julie M. Jeffries. This project is
+        <a
+          href="https://github.com/juliemeta/world-clock-time-zones"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://worldclock-timezones.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >.
+      </footer>
+    </div>
     <script src="javascript/index.js"></script>
   </body>
 </html>
