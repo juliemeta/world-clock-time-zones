@@ -31,28 +31,29 @@ function updateTimeZone() {
   tokyoTimeElement.innerHTML = tokyoTime.format("h:mm [<small>]A[</small>]");
 }
 
-function addCityToList(event) {
+function addCity(event) {
   let cityTimeZone = event.target.value;
   let cityName = cityTimeZone.replace(`_`, ` `).split(`/`)[1];
-  let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY, dddd");
-  let cityTime = moment().tz(cityTimeZone).format("h:mm [<small>]A[</small>]");
+  let cityTime = moment().tz(cityTimeZone);
+
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = `
+  citiesElement.innerHTML += `
   <div class="city-box">
           <div>
             <h2>${cityName}</h2>
-            <div class="date">${cityDate}</div>
+            <div class="date">${cityTime.format("MMMM Do YYYY, dddd")}</div>
           </div>
           <div>
-            <div class="time">${cityTime}</div>
+            <div class="time">${cityTime.format(
+              "h:mm [<small>]A[</small>]"
+            )}</div>
           </div>
         </div>
         `;
 }
 
-let citySelectElement = document.querySelector("#city-select");
-
-citySelectElement.addEventListener("change", addCityToList);
-
-updateTimeZone;
+updateTimeZone();
 setInterval(updateTimeZone, 100);
+
+let citySelectElement = document.querySelector("#city-select");
+citySelectElement.addEventListener("change", addCity);
