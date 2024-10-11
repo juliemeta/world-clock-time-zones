@@ -33,6 +33,9 @@ function updateTimeZone() {
 
 function addCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current-location") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace(`_`, ` `).split(`/`)[1];
   let cityTime = moment().tz(cityTimeZone);
 
