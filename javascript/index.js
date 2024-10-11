@@ -34,13 +34,13 @@ function updateTimeZone() {
 function addCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current-location") {
-    cityTimeZone = moment.tz.guess();
+    cityTimeZone = `${moment.tz.guess()} 📍`;
   }
   let cityName = cityTimeZone.replace(`_`, ` `).split(`/`)[1];
   let cityTime = moment().tz(cityTimeZone);
 
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML += `
+  citiesElement.innerHTML = `
   <div class="city-box">
           <div>
             <h2>${cityName}</h2>
@@ -52,6 +52,9 @@ function addCity(event) {
             )}</div>
           </div>
         </div>
+         <button id="refresh-page-button"><a href="/"
+        >Back to list view</a
+      ></button>
         `;
 }
 

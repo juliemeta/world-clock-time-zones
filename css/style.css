@@ -1,6 +1,6 @@
 body {
   background: rgb(0, 0, 0, 0.9);
-  color: #ffffffec;
+  color: #fffffff6;
   font-family: sans-serif;
 }
 
@@ -24,8 +24,25 @@ h2 {
   font-size: 24px;
 }
 
+p {
+  text-align: center;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  width: 75%;
+  max-width: 500px;
+}
+
+.hr-h1 {
+  max-width: 50%;
+}
+
 a {
-  color: rgb(47, 102, 185);
+  color: rgb(125, 170, 238);
+  text-decoration: none;
 }
 
 #city-select {
@@ -47,7 +64,7 @@ a {
 }
 
 .city-box:last-child {
-  border: none;
+  border-bottom: none;
 }
 
 .date {
@@ -59,20 +76,34 @@ a {
   font-size: 48px;
   font-weight: bold;
 }
+
+#refresh-page-button {
+  display: block;
+  margin: 25px auto;
+  background-color: rgb(22, 22, 22);
+
+  border-radius: 4px;
+  padding: 5px;
+  transition: all 2ms ease-in-out;
+}
+#refresh-page-button:hover {
+  cursor: pointer;
+  background-color: rgba(22, 22, 22, 0.26);
+  color: #ffffff;
+}
+
+#refresh-page-button a {
+  color: #ffffffec;
+}
+
 small {
   font-size: 24px;
   vertical-align: middle;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 90%;
-}
-
 footer {
   text-align: center;
   margin-top: 80px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
+  color: rgba(255, 255, 255, 0.726);
+  font-size: 13px;
 }
