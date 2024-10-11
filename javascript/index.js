@@ -33,14 +33,26 @@ function updateTimeZone() {
 
 function addCityToList(event) {
   let cityTimeZone = event.target.value;
-  let cityTime = moment().tz(cityTimeZone);
+  let cityName = cityTimeZone.replace(`_`, ` `).split(`/`)[1];
+  let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY, dddd");
+  let cityTime = moment().tz(cityTimeZone).format("h:mm [<small>]A[</small>]");
   let citiesElement = document.querySelector("#cities");
-  citiesElement.innerHTML = "Hello";
+  citiesElement.innerHTML = `
+  <div class="city-box">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityDate}</div>
+          </div>
+          <div>
+            <div class="time">${cityTime}</div>
+          </div>
+        </div>
+        `;
 }
-
-updateTimeZone;
-setInterval(updateTimeZone, 100);
 
 let citySelectElement = document.querySelector("#city-select");
 
 citySelectElement.addEventListener("change", addCityToList);
+
+updateTimeZone;
+setInterval(updateTimeZone, 100);
