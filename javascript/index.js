@@ -34,8 +34,8 @@ function updateTimeZone() {
 function addCityToList(event) {
   let cityTimeZone = event.target.value;
   let cityTime = moment().tz(cityTimeZone);
-
-  console.log(cityTime.format("MMMM Do YYYY, dddd"));
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = "Hello";
 }
 
 updateTimeZone;
